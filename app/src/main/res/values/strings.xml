@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">AInsta</string>
+    <string name="back4app_server_url">https://parseapi.back4app.com/</string>
+
+    <!-- Paste BOTH strings as required -->
+    <string name="back4app_app_id">Rijo9gmgvrmZXlGEzsXDeySvs7IkHt0RNYBXccwh</string>
+    <string name="back4app_client_key">5DoMQ8uh54NNE39gmDEpq4Np4x14oBUMRUVJAcAD</string>
+    <string name="profile_other">Other profile pic</string>
+    <string name="profile_me">My Profile Pic</string>
+</resources>
