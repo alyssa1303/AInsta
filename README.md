@@ -33,7 +33,7 @@ GIF created with [ScreenToGif](https://www.screentogif.com/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+- Lay out the file was quite troublesome.
 
 ## Open-source libraries used
 
