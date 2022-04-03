@@ -12,8 +12,12 @@
         <entry key="..\:/Users/alyss/AndroidStudioProjects/AInsta/app/src/main/res/layout/activity_chat.xml" value="0.264" />
         <entry key="..\:/Users/alyss/AndroidStudioProjects/AInsta/app/src/main/res/layout/activity_login.xml" value="0.12158054711246201" />
         <entry key="..\:/Users/alyss/AndroidStudioProjects/AInsta/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/alyss/AndroidStudioProjects/AInsta/app/src/main/res/layout/fragment_compose.xml" value="0.25" />
+        <entry key="..\:/Users/alyss/AndroidStudioProjects/AInsta/app/src/main/res/layout/fragment_feed.xml" value="0.11448834853090173" />
+        <entry key="..\:/Users/alyss/AndroidStudioProjects/AInsta/app/src/main/res/layout/item_post.xml" value="0.1" />
         <entry key="..\:/Users/alyss/AndroidStudioProjects/AInsta/app/src/main/res/layout/message_incoming.xml" value="0.25" />
         <entry key="..\:/Users/alyss/AndroidStudioProjects/AInsta/app/src/main/res/layout/messages_outgoing.xml" value="0.25" />
+        <entry key="..\:/Users/alyss/AndroidStudioProjects/AInsta/app/src/main/res/menu/menu_bottom_navigation.xml" value="0.25" />
         <entry key="..\:/Users/alyss/AndroidStudioProjects/AInsta/app/src/main/res/menu/menu_main.xml" value="0.264" />
         <entry key="..\:/Users/alyss/AndroidStudioProjects/AInsta/app/src/main/res/xml/fileprovider.xml" value="0.1" />
       </map>
