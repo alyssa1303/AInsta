@@ -40,6 +40,7 @@ class MainActivity : AppCompatActivity() {
 
                 R.id.action_profile -> {
                     Toast.makeText(this, "Profile", Toast.LENGTH_SHORT).show()
+                    fragmentToShow = ProfileFragment()
                 }
             }
 

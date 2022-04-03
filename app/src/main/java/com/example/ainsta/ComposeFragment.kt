@@ -78,6 +78,9 @@ class ComposeFragment : Fragment() {
                 Log.i(MainActivity.TAG, "Successfully saved post")
             }
         }
+
+        val intent = Intent(requireContext(), MainActivity::class.java)
+        startActivity(intent)
     }
 
     fun onLaunchCamera() {
