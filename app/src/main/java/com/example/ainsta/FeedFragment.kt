@@ -9,12 +9,14 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.parse.FindCallback
 import com.parse.ParseException
 import com.parse.ParseQuery
 
 open class FeedFragment : Fragment() {
 
+    lateinit var swipeContainer: SwipeRefreshLayout
     lateinit var postsRecyclerView: RecyclerView
     lateinit var adapter: PostAdapter
     var posts: MutableList<Post> = mutableListOf()
@@ -28,6 +30,22 @@ open class FeedFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        // Lookup the swipe container view
+        swipeContainer = view.findViewById(R.id.swipeContainer)
+
+        swipeContainer.setOnRefreshListener {
+            // Your code to refresh the list here.
+            // Make sure you call swipeContainer.setRefreshing(false)
+            // once the network request has completed successfully.
+            queryPosts()
+        }
+
+        // Configure the refreshing colors
+        swipeContainer.setColorSchemeResources(android.R.color.holo_blue_bright,
+            android.R.color.holo_green_light,
+            android.R.color.holo_orange_light,
+            android.R.color.holo_red_light)
 
         postsRecyclerView = view.findViewById<RecyclerView>(R.id.postRecyclerView)
 
@@ -45,6 +63,7 @@ open class FeedFragment : Fragment() {
         // Specify the object id
         query.include(Post.KEY_USER)
         // Return posts in descending order
+        query.setLimit(20)
         query.addDescendingOrder("createdAt")
         query.findInBackground(object : FindCallback<Post> {
             override fun done(allPosts: MutableList<Post>?, e: ParseException?) {
@@ -58,8 +77,13 @@ open class FeedFragment : Fragment() {
                                     post.getUser()?.username)
                         }
 
+                        posts.clear()
+                        adapter.notifyDataSetChanged()
+
                         posts.addAll(allPosts)
                         adapter.notifyDataSetChanged()
+
+                        swipeContainer.setRefreshing(false)
 
                     }
                 }

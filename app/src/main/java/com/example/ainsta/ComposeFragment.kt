@@ -48,6 +48,8 @@ class ComposeFragment : Fragment() {
             val user = ParseUser.getCurrentUser()
             if (photoFile != null) {
                 submitPost(description, user, photoFile!!)
+                view.findViewById<EditText>(R.id.description).setText("")
+                ivPreview.setImageBitmap(null)
             }
             else {
                 Log.e(MainActivity.TAG, "There is photo taken")
@@ -78,9 +80,6 @@ class ComposeFragment : Fragment() {
                 Log.i(MainActivity.TAG, "Successfully saved post")
             }
         }
-
-        val intent = Intent(requireContext(), MainActivity::class.java)
-        startActivity(intent)
     }
 
     fun onLaunchCamera() {
