@@ -39,8 +39,7 @@ Here's a walkthrough of implemented user stories:
 GIF created with [ScreenToGif](https://www.screentogif.com/).
 
 ## Notes
-
-Describe any challenges encountered while building the app.
+- Knowing where to put swipe to refresh feature is quite tricky
 
 ## Open-source libraries used
 
@@ -49,7 +48,7 @@ Describe any challenges encountered while building the app.
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2022] [Alyssa Vu]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
